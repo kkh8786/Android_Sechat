@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="?android:windowBackground"
+              android:focusable="true"
+              android:focusableInTouchMode="true">
+
+    <SearchView
+        android:id="@+id/activity_navigation_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:iconifiedByDefault="false"
+        android:imeOptions="flagNoExtractUi"
+        android:queryHint="@string/activity_navigation_search_hint"/>
+
+    <Button
+        android:id="@+id/activity_navigation_current_call_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        style="?android:borderlessButtonStyle"
+        android:text="@string/action_current_call"
+        android:background="@color/sechat_blue"
+        android:textColor="@android:color/white"
+        android:textAllCaps="true"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textAlignment="viewStart"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"/>
+
+    <ListView
+        android:id="@+id/activity_navigation_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

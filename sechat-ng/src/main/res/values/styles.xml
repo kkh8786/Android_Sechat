@@ -1,0 +1,80 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/sechat_gray</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+    </style>
+
+    <style name="AppTheme_DialogWhenLarge" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="android:windowBackground">@color/sechat_gray</item>
+        <item name="android:actionBarStyle">@style/ActionBar</item>
+    </style>
+
+    <style name="AppTheme_Dialog" parent="android:Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@color/sechat_gray</item>
+    </style>
+
+    <style name="ActionBar" parent="android:Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/sechat_blue</item>
+    </style>
+
+    <style name="fragment_contact_item_icon">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <style name="fragment_contact_item_container">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="fragment_contact_item_text" parent="fragment_contact_item_text_appearance">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/fragment_contact_item_border</item>
+    </style>
+
+    <style name="fragment_contact_item_text_appearance" parent="android:TextAppearance.Medium">
+        <item name="android:textColor">@color/sechat_gray_dark</item>
+    </style>
+
+    <style name="activity_navigation_username_text_appearance" parent="android:TextAppearance.Medium">
+    </style>
+
+    <style name="activity_navigation_section_text_appearance" parent="android:TextAppearance.Small">
+    </style>
+
+    <style name="activity_navigation_section_header" parent="activity_navigation_section_text_appearance">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+    </style>
+
+    <style name="activity_navigation_section_add_button" parent="android:Widget.DeviceDefault.Button.Borderless">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:src">@drawable/ic_add_grey600_24dp</item>
+    </style>
+
+    <style name="activity_navigation_button" parent="android:Widget.DeviceDefault.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textAppearance">@style/activity_navigation_section_text_appearance</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+</resources>

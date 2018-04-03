@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:focusable="true"
+             android:focusableInTouchMode="true">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_chat_message_list_background"
+        android:scaleType="centerCrop"
+        android:id="@+id/fragment_chat_background"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/fragment_chat_message_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:stackFromBottom="true"
+            android:transcriptMode="normal"
+            android:overScrollMode="never"
+            android:overScrollFooter="@null"
+            android:overScrollHeader="@null"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent" />
+
+        <include layout="@layout/view_burn_mode"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/fragment_chat_message_list_background"
+            android:gravity="bottom"
+            android:id="@+id/fragment_chat_input_container">
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/fragment_chat_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:inputType="textMultiLine|textCapSentences"
+                android:layout_weight="1"
+                android:hint="@string/chat_message_hint"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:imeOptions="actionSend|flagNoExtractUi"/>
+
+            <ImageButton
+                android:id="@+id/fragment_chat_send"
+                android:contentDescription="@string/record"
+                android:src="@drawable/ic_send_grey600_24dp"
+                style="?android:borderlessButtonStyle"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/fragment_chat_camera"
+                    android:contentDescription="@string/fragment_chat_camera"
+                    style="?android:borderlessButtonStyle"
+                    android:src="@drawable/ic_photo_camera_grey600_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_chat_send_photo"
+                    android:contentDescription="@string/fragment_chat_send_photo"
+                    style="?android:borderlessButtonStyle"
+                    android:src="@drawable/ic_photo_library_grey600_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_chat_send_audio"
+                    android:contentDescription="@string/fragment_chat_send_audio"
+                    style="?android:borderlessButtonStyle"
+                    android:src="@drawable/ic_mic_grey600_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_chat_send_location"
+                    android:contentDescription="@string/fragment_chat_send_location"
+                    style="?android:borderlessButtonStyle"
+                    android:src="@drawable/ic_room_grey600_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_chat_send_contact"
+                    android:contentDescription="@string/fragment_chat_send_contact"
+                    style="?android:borderlessButtonStyle"
+                    android:src="@drawable/ic_contacts_grey600_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageButton
+                    android:id="@+id/fragment_chat_send_ping"
+                    android:contentDescription="@string/fragment_chat_send_ping"
+                    style="?android:borderlessButtonStyle"
+                    android:src="@drawable/ic_warning_grey600_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:id="@+id/fragment_chat_audio_record_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sechat_white"
+            tools:visibility="visible"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/audio_recorder_status_text"/>
+
+                <TextView
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    tools:text="--:--:--"
+                    android:id="@+id/fragment_chat_audio_elapsed_time"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                android:gravity="center">
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:contentDescription="@android:string/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/audio_record_cancel"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/fragment_chat_audio_cancel"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/audio_record_background"
+                    android:gravity="center">
+
+                    <ImageButton
+                        style="?android:attr/borderlessButtonStyle"
+                        android:contentDescription="@string/stop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/audio_record_stop"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/fragment_chat_audio_stop"/>
+
+                </LinearLayout>
+
+                <ImageButton
+                    style="?android:attr/borderlessButtonStyle"
+                    android:contentDescription="@string/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/audio_record_send"
+                    android:background="@android:color/transparent"
+                    android:id="@+id/fragment_chat_audio_send"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

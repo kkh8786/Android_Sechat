@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.stacksmashing.sechat.CheckableFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingTop="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/message_data_container"
+                android:layout_marginStart="@dimen/message_outer_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/message_background_outgoing"/>
+
+            <ImageView
+                android:src="@drawable/status_triangle_right"
+                android:tint="@color/sechat_blue"
+                android:layout_width="8dp"
+                android:layout_height="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingBottom="4dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp">
+
+            <TextView
+                android:id="@+id/message_time"
+                tools:text="Jan 25, 2015 8:24 PM"
+                android:textSize="5pt"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <net.stacksmashing.sechat.StatusTextView
+                android:id="@+id/message_outgoing_status"
+                style="?android:textAppearanceSmall"
+                tools:text="R"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</net.stacksmashing.sechat.CheckableFrameLayout>

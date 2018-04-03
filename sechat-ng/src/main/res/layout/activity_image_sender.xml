@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/activity_image_sender_preview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="?android:buttonBarStyle">
+
+        <ImageButton
+            android:id="@+id/activity_image_sender_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:contentDescription="@android:string/cancel"
+            style="?android:buttonBarButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/activity_image_sender_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_edit_black_24dp"
+            android:contentDescription="@string/activity_image_sender_edit"
+            style="?android:buttonBarButtonStyle"/>
+
+        <ImageButton
+            android:id="@+id/activity_image_sender_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_check_black_24dp"
+            android:contentDescription="@string/activity_image_sender_send"
+            style="?android:buttonBarButtonStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>

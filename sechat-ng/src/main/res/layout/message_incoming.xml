@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<net.stacksmashing.sechat.CheckableFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                app:border_width="0dp"
+                android:id="@+id/message_incoming_contact_picture"
+                android:layout_width="20pt"
+                android:layout_height="20pt"
+                android:layout_marginEnd="2dp"
+                android:layout_gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:src="@drawable/status_triangle_left"
+                android:tint="@android:color/white"/>
+
+            <FrameLayout
+                android:id="@+id/message_data_container"
+                android:layout_marginEnd="@dimen/message_outer_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/message_background_incoming"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/message_incoming_username"
+                style="?android:textAppearanceSmall"
+                tools:text="username"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/message_time"
+                tools:text="Jan 25, 2015 8:24 PM"
+                android:textSize="5pt"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</net.stacksmashing.sechat.CheckableFrameLayout>

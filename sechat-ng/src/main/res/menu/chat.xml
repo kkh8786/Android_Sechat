@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/menu_chat_show_contact"
+            android:title="@string/menu_chat_show_contact"
+            android:icon="@drawable/ic_person_white_24dp"
+            android:showAsAction="ifRoom" />
+
+    <item
+            android:id="@+id/menu_chat_show_group_members"
+            android:title="@string/menu_chat_show_group_members"
+            android:icon="@drawable/ic_group_white_24dp"
+            android:showAsAction="ifRoom" />
+
+    <item
+            android:id="@+id/menu_chat_delete_chat"
+            android:title="@string/menu_chat_delete_chat"/>
+</menu>

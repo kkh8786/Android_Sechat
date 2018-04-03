@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/message_media_padding">
+
+    <ImageView
+        android:id="@+id/message_data_video_preview"
+        android:layout_width="@dimen/message_preview_width"
+        android:layout_height="@dimen/message_preview_height"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@android:drawable/ic_media_play"/>
+
+    <TextView
+        android:id="@+id/message_data_video_duration"
+        android:layout_gravity="bottom|end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/video_duration_background"
+        android:textColor="@android:color/white"
+        android:layout_margin="8dp"
+        tools:text="00:10"/>
+
+</FrameLayout>

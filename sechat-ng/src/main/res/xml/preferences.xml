@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference android:key="send_delivery_notifications"
+        android:defaultValue="true"
+        android:title="@string/preferences_send_delivery_notifications"/>
+
+    <CheckBoxPreference android:key="send_read_notifications"
+        android:defaultValue="true"
+        android:title="@string/preferences_send_read_notifications"/>
+
+    <CheckBoxPreference android:key="send_in_chat_messages"
+        android:defaultValue="true"
+        android:title="@string/preferences_send_in_chat"/>
+
+    <CheckBoxPreference android:key="invisible"
+        android:title="@string/preferences_invisible_mode"/>
+
+    <PreferenceCategory android:title="@string/preferences_chat">
+
+        <Preference android:key="chat_background_picture"
+            android:title="@string/preferences_background_picture"/>
+
+        <Preference android:key="chat_background_picture_clear"
+            android:enabled="false"
+            android:title="@string/preferences_background_picture_clear"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

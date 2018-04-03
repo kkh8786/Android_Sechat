@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="net.stacksmashing.sechat">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme"
+            android:supportsRtl="true">
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="net.stacksmashing.sechat.googleMapsWebApiKey"
+            android:value="AIzaSyBVz4wbvnAeguGQTEcxxkmGRNnuidd7-5M" />
+
+        <meta-data
+            android:name="net.stacksmashing.sechat.hockeyAppId"
+            android:value="5c933fa7dff703e5b0f00c2a55954cb3" />
+
+        <meta-data
+            android:name="net.stacksmashing.sechat.hockeyUpdatesEnabled"
+            android:value="true" />
+
+        <activity android:name="net.hockeyapp.android.UpdateActivity" />
+
+        <activity
+                android:name=".NavigationActivity"
+                android:label="@string/app_name"
+                android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name=".AddContactActivity"
+                android:label="@string/activity_add_contact"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".ContactActivity"
+                android:label="@string/activity_contact"
+                android:theme="@style/AppTheme_DialogWhenLarge"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".QRCodeScannerActivity"
+                android:label="@string/activity_qr_code_scanner"
+                android:parentActivityName=".AddContactActivity"/>
+
+        <activity
+                android:name=".RegistrationActivity"
+                android:label="@string/activity_registration_register"
+                android:windowSoftInputMode="stateVisible"/>
+
+        <activity
+                android:name=".LoginActivity"
+                android:label="@string/activity_login_login"
+                android:windowSoftInputMode="stateVisible"/>
+
+        <activity
+                android:name=".SettingsActivity"
+                android:label="@string/action_settings"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+            android:name=".PhotosActivity"
+            android:label="@string/activity_photos_view"
+            android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+            android:name=".PhotosViewPagerActivity"
+            android:label="@string/activity_photos_view"
+            android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".ImageViewActivity"
+                android:label="@string/activity_image_view"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".IncomingCallActivity"
+                android:screenOrientation="portrait"
+                android:label="@string/activity_incoming_call"
+                android:launchMode="singleTask"
+                android:taskAffinity=""
+                android:excludeFromRecents="true"/>
+
+        <activity
+                android:name=".GroupChatCreationActivity"
+                android:label="@string/activity_group_chat_creation"
+                android:theme="@style/AppTheme_Dialog"
+                android:noHistory="true"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".ChangeAliasActivity"
+                android:label="@string/activity_change_alias"
+                android:theme="@style/AppTheme_Dialog"
+                android:noHistory="true"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+            android:name=".ChangeStatusActivity"
+            android:label="@string/activity_change_status"
+            android:theme="@style/AppTheme_Dialog"
+            android:noHistory="true"
+            android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".ContactSelectionActivity"
+                android:label="@string/activity_contact_selection"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".ChatSelectionActivity"
+                android:label="@string/activity_chat_selection"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".GroupChatDetailActivity"
+                android:label="@string/activity_group_chat_detail"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".PhoneNumberRegistrationActivity"
+                android:label="@string/activity_phone_number_registration"
+                android:theme="@style/AppTheme_DialogWhenLarge"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".PhoneNumberVerificationActivity"
+                android:label="@string/activity_phone_number_verification"
+                android:theme="@style/AppTheme_DialogWhenLarge"
+                android:parentActivityName=".NavigationActivity"/>
+
+        <activity
+                android:name=".ImageSenderActivity"
+                android:label="@string/activity_image_sender"/>
+
+        <activity
+                android:name=".ImageEditorActivity"
+                android:label="@string/activity_image_editor"
+                android:screenOrientation="portrait"/>
+
+        <activity android:name=".ChannelListActivity"
+                  android:label="@string/activity_channel_list"
+                  android:parentActivityName=".NavigationActivity"/>
+
+        <activity android:name=".ChannelCreationActivity"
+                  android:label="@string/activity_channel_creation"
+                  android:parentActivityName=".ChannelListActivity"/>
+
+        <receiver
+                android:name=".MessageDeletionReceiver"
+                android:enabled="true" />
+
+        <provider
+                android:authorities="net.stacksmashing.sechat.provider"
+                android:name=".db.DatabaseProvider"
+                android:exported="false"/>
+
+        <!-- FIXME: Make this more granular. -->
+        <provider
+                android:name="android.support.v4.content.FileProvider"
+                android:authorities="net.stacksmashing.sechat.fileProvider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths"/>
+
+        </provider>
+
+        <service
+                android:name=".network.NetworkService"/>
+
+        <service
+            android:name=".ScreenShotNotificationListener"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action
+                    android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+    </application>
+</manifest>

@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="message_corner_radius">3dp</dimen>
+    <dimen name="message_outer_margin">70dp</dimen>
+
+    <!-- Padding inside text/contact/in-progress download messages -->
+    <dimen name="message_content_padding">8dp</dimen>
+    <!-- Padding inside image/video/location messages -->
+    <dimen name="message_media_padding">5dp</dimen>
+
+    <!-- Dimensions of image/video/location previews -->
+    <dimen name="message_preview_width">160dp</dimen>
+    <dimen name="message_preview_height">140dp</dimen>
+    <dimen name="contact_picture_border_thickness">2dp</dimen>
+    <dimen name="photo_thumbnail_height">100dp</dimen>
+
+    <dimen name="burn_mode_text_size">12sp</dimen>
+</resources>

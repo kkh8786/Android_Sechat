@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sechat_blue">#FF3E629A</color>
+    <color name="sechat_blue_light">#FF85D3EF</color>
+    <color name="sechat_blue_dark">#FF223C63</color>
+    <color name="sechat_green">#FF25DE67</color>
+    <color name="sechat_gray">#FFE5E5E5</color>
+    <color name="sechat_gray_dark">#FF6E6E6E</color>
+    <color name="sechat_gray_bg">#FFF2F3F5</color>
+    <color name="sechat_gray_edge">#FFD9DADC</color>
+    <color name="sechat_black">#FF000000</color>
+    <color name="sechat_red">#FFFF0000</color>
+    <color name="sechat_orange">#FFFF8000</color>
+    <color name="sechat_white">#FFFFFFFF</color>
+    <color name="secret_chat">#ff408040</color>
+</resources>

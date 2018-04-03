@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<net.stacksmashing.sechat.CheckableLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/contact_list_item_checkbox"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="4dp"/>
+
+    <TextView
+        android:id="@+id/contact_list_item_online_status"
+        android:text="@string/contact_list_online_status"
+        style="?android:textAppearanceListItemSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="12dp"/>
+
+    <TextView
+        android:id="@+id/contact_list_item_username"
+        style="?android:textAppearanceListItemSmall"
+        tools:text="Username"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</net.stacksmashing.sechat.CheckableLinearLayout>

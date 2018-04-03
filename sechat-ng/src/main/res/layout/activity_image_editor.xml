@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/activity_image_editor_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/activity_image_editor_cancel"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_cancel_black_24dp"
+            android:contentDescription="@android:string/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/activity_image_editor_discard"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:contentDescription="@string/menu_image_editor_discard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/activity_image_editor_undo"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_undo_black_24dp"
+            android:contentDescription="@string/menu_image_editor_undo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/activity_image_editor_text"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_format_font_black_24dp"
+            android:contentDescription="@string/menu_image_editor_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/activity_image_editor_options"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_format_paint_black_24dp"
+            android:contentDescription="@string/menu_image_editor_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/activity_image_editor_accept"
+            style="?android:attr/borderlessButtonStyle"
+            android:src="@drawable/ic_check_black_24dp"
+            android:contentDescription="@android:string/ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+</LinearLayout>

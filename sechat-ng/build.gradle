@@ -1,0 +1,80 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.0'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 22
+        versionCode 1
+        versionName "0.5.2"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // You must install or update the Support Repository through the SDK manager to use this dependency.
+    compile 'com.android.support:support-v13:23.0.1'
+    compile 'com.android.support:support-annotations:23.0.1'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.google.android.gms:play-services-location:8.1.0'
+    compile 'me.dm7.barcodescanner:zbar:1.8.2'
+    compile 'com.madgag.spongycastle:core:1.50.0.0'
+    compile 'com.madgag.spongycastle:prov:1.50.0.0'
+    //compile 'org.msgpack:msgpack:0.6.11' // this is supplied in libs/ for now.
+    compile 'com.jakewharton:butterknife:5.1.2'
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'org.apache.directory.studio:org.apache.commons.io:2.4'
+    compile 'com.squareup:otto:1.3.5'
+    compile 'de.hdodenhof:circleimageview:1.2.1'
+    compile ':richedit-0.3.0@aar'
+    compile 'com.squareup.picasso:picasso:2.4.0'
+    compile 'com.cocosw:bottomsheet:0.9-custom@aar'
+    compile 'it.sephiroth.android.library.horizontallistview:hlistview:1.2.2'
+    compile 'com.googlecode.mp4parser:isoparser:1.0.5.4'
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+}
